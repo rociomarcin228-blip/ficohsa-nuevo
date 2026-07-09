@@ -1,0 +1,341 @@
+body {
+    background: #ebebec;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    line-height: 1.42857143;
+    font-weight: 400 !important;
+    font-family: dinRegular;
+}
+
+@font-face {
+    font-family: "dinRegular";
+    src: url("OpenSans-Regular.14077b877bbfbc815a94.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "streamline";
+    src: url("streamline.ce5118465c5c32d964bf.woff") format("woff");
+}
+
+.stream-arrow_back_1:before {
+    content: "\e90e";
+    font-family: streamline !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #004299;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.stream-Icon_login_password_3:before {
+    content: "\e913";
+    font-size: 32px;
+    color: #0058cb;
+    font-family: streamline !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: 7px;
+}
+
+.stream-Icon_login_profile_3:before {
+    content: "\e912";
+    font-family: streamline !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 35px;
+    color: #0058cb;
+    position: relative;
+    top: 10px;
+    box-sizing: border-box;
+}
+ .input-div {
+        padding: 24px 72px 0 42px;
+        display: block
+    }
+
+.header {
+    background-color: #0058cb;
+    text-align: center;
+    padding-top: 12px;
+    height: 180px;
+    position: relative;
+}
+
+.header .top-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.header .top-menu div {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 2px;
+    margin-left: 8px;
+    padding-left: 10px;
+}
+
+.header .top-menu div:not(:last-child)::after {
+    content: "|";
+    margin-left: 8px;
+}
+
+.header img {
+    height: 50px; /* Ajusta la altura del logo según tus necesidades */
+    display: block;
+    width: 250px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+.login-container {
+    width: 940px;
+    margin: -54px auto 0;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    background: #fff;
+    min-height: 380px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    animation: .25s ipswich-animated-init;
+    opacity: 1;
+    background-image: url(2b910681-25d9-48bc-990a-80769e136b85.jpeg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+.login-container-2 {
+    width: 578px;
+    overflow: hidden;
+    position: relative;
+    min-height: 380px;
+    float: left;
+    box-sizing: border-box;
+    display: block;
+    unicode-bidi: isolate;
+    --vh: 6.07px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.login-container h2 {
+    color: #001945;
+    line-height: 1.42857143;
+    font-weight: 400 !important;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.login-container label {
+    display: block;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: calc(100% - 42px); /* Ajusta el ancho de los inputs */
+    border: 1px solid #bbb;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 16px;
+    color: #333;
+    border-left: 3px solid #004299; /* Agrega el borde izquierdo */
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.login-container input[type="submit"] {
+    width: 190px;
+    height: 39px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+    background: #0058cb;
+    transition: background .3s;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #e1e1e1;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #004fad;
+}
+
+.button-big {
+    width: 190px;
+    height: 39px;
+    text-align: center;
+    display: block;
+    padding-bottom: 5px;
+    background: #0058cb;
+    color: white;
+    animation: .3s;
+    font-size: 15px;
+    border-color: transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button-big:hover {
+    background-color: #024bab; /* Color de fondo más oscuro cuando el cursor está encima */
+}
+
+.button-big:active {
+    background-color: #024bab; /* Color de fondo más oscuro cuando se hace clic */
+}
+
+.button-div {
+    padding-top: 16px;
+    padding-right: 72px;
+    float: right;
+}
+
+.panel-usuario-texto {
+    color: #2580b0;
+    font-size: 14px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.panel-usuario {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 89%;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    text-align: right;
+}
+
+.panel-usuario-texto {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.divider {
+    display: table-cell;
+    width: 1px;
+    border-left: 1px solid #e1e1e1;
+    margin: 0 6px 0 9px;
+    height: 24px;
+    padding-top: 4px;
+    vertical-align: top;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .header {
+        height: 40px;
+    }
+    .input-div {
+        padding: 0px;
+    }
+
+    .header .top-menu {
+        position: static;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .header .top-menu div {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+
+    .header img {
+        width: 30%; /* Ajusta el tamaño del logo */
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        margin-left: 10px;
+    }
+
+    .login-container {
+        width: 100%;
+        margin-top: 0px;
+        padding: 10px;
+        background-position: center top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+
+    .login-container h2 {
+        font-size: 24px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"], {
+        width: 70%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .button-div {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .panel-usuario {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Estilo para la imagen en versión móvil */
+    .login-container::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 200px; /* Ajusta la altura según sea necesario */
+        margin-top: 20px;
+    }
+    .login-container-2 {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 380px;
+    float: left;
+    box-sizing: border-box;
+    display: block;
+    unicode-bidi: isolate;
+    --vh: 6.07px;
+    -webkit-text-size-adjust: 100%;
+}
+.teclado-virtual {
+    display: none;
+}
+}
