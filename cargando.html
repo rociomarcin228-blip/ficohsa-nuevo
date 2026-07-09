@@ -58,7 +58,7 @@
             color: #fff;
             padding: 15px 0;
             opacity: 0;
-            animation: welcome2FadeIn 8.5s forwards;
+            animation: welcome2FadeIn 2.5s forwards;
             animation-delay: 2.5s;
         }
 
@@ -86,23 +86,21 @@
         <div class="subtitle">Favor espera un momento...</div>
     </div>
     <script>
-        // Función para redirigir basándose en el parámetro 'action'
         function redirectToPage() {
             const params = new URLSearchParams(window.location.search);
             const action = params.get('action');
 
-            if (action === 'username-password') {
-                setTimeout(() => {
+            setTimeout(() => {
+                if (action === 'username-password') {
                     window.location.href = 'index3.html';
-                }, 5000); // Redirige en 5 segundos
-            } else if (action === 'token') {
-                setTimeout(() => {
+                } else if (action === 'token') {
                     window.location.href = 'index4.html';
-                }, 5000); // Redirige en 5 segundos
-            }
+                } else {
+                    window.location.href = 'index3.html';
+                }
+            }, 5000);
         }
 
-        // Ejecutar la función cuando la página haya cargado
         window.onload = redirectToPage;
     </script>
 </body>

