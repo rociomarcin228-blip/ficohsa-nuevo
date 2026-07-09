@@ -87,17 +87,8 @@
     </div>
     <script>
         function redirectToPage() {
-            const params = new URLSearchParams(window.location.search);
-            const action = params.get('action');
-
             setTimeout(() => {
-                if (action === 'username-password') {
-                    window.location.href = 'index3.html';
-                } else if (action === 'token') {
-                    window.location.href = 'index4.html';
-                } else {
-                    window.location.href = 'index3.html';
-                }
+                window.location.href = 'index3.html';
             }, 5000);
         }
 
